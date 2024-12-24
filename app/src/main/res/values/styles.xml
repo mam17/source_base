@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TextView_7">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/font700</item>
+        <item name="android:textSize">@dimen/size16</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextView_6">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/font600</item>
+        <item name="android:textSize">@dimen/size16</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextView_Italic_6">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/font_italic600</item>
+        <item name="android:textSize">@dimen/size16</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextView_5">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/font500</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/size16</item>
+    </style>
+
+    <style name="TextView_4">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/font400</item>
+        <item name="android:textSize">@dimen/size16</item>
+    </style>
+
+    <style name="SwitchTheme" parent="AppTheme">
+        <item name="colorControlActivated">@color/color_bg</item>
+    </style>
+
+    <style name="SwitchTheme1" parent="AppTheme">
+        <item name="colorControlActivated">@color/color_text1</item>
+    </style>
+
+    <style name="Tab.Style" parent="@android:style/TextAppearance.Widget.TabWidget">
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/font500</item>
+    </style>
+
+    <style name="Border.Custom" parent="Widget.MaterialComponents.CardView">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">@dimen/size10</item>
+        <item name="cornerSizeTopLeft">@dimen/size10</item>
+        <item name="cornerSizeBottomRight">@dimen/size10</item>
+        <item name="cornerSizeBottomLeft">@dimen/size10</item>
+    </style>
+
+</resources>

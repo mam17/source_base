@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/size30"
+        android:background="@drawable/bg_border_dialog_success"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingVertical="@dimen/size20"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="@dimen/size200"
+            android:layout_height="@dimen/size200"
+            android:importantForAccessibility="no"
+            android:src="@drawable/img_dialog_star" />
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:isIndicator="false"
+            android:numStars="5"
+            android:stepSize="1" />
+
+        <TextView
+            style="@style/TextView_5"
+            android:layout_marginHorizontal="@dimen/size16"
+            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size20"
+            android:text="@string/txt_how_would_you_love_this_app"
+            android:textColor="@color/text"
+            android:textStyle="italic" />
+
+<!--        <androidx.appcompat.widget.AppCompatButton-->
+<!--            android:id="@+id/btnNotNow"-->
+<!--            style="@style/TextView_6"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="@dimen/size52"-->
+<!--            android:layout_marginHorizontal="@dimen/size20"-->
+<!--            android:layout_marginTop="@dimen/size29"-->
+<!--            android:background="@drawable/bg_border_btn_rate"-->
+<!--            android:stateListAnimator="@null"-->
+<!--            android:text="@string/txt_rate_us"-->
+<!--            android:textAllCaps="false"-->
+<!--            android:textColor="@color/color_bg"-->
+<!--            android:textSize="@dimen/size14"-->
+<!--            app:layout_constraintBottom_toTopOf="@+id/fl_adplaceholder"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            tools:ignore="SpUsage" />-->
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

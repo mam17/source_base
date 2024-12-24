@@ -1,0 +1,56 @@
+<resources>
+    <string name="onboarding_intro1">Veja qualquer coisa através da tela do telefone</string>
+    <string name="onboarding_intro2">Papéis de parede gratuitos</string>
+    <string name="onboarding_intro3">Papéis de parede gratuitos</string>
+
+    <string name="txt_transparent">Papel de parede transparente</string>
+
+    <string name="txt_categories">Categorias</string>
+    <string name="txt_cancel">Cancelar</string>
+    <string name="this_action_contain_ads">Esta ação contém anúncios</string>
+    <string name="loading_cmp">Carregando Plataforma de Gestão de Consentimento</string>
+    <string name="txt_next">Próximo</string>
+    <string name="txt_get_start">Começar</string>
+    <string name="are_you_sure_you_want_to_exit">Tem certeza de que deseja sair?</string>
+    <string name="txt_exit">Sair</string>
+    <string name="choose_one">Escolha um</string>
+
+    <string name="rate_us">Avalie-nos</string>
+    <string name="language">Idioma</string>
+    <string name="privacy_policy">Política de Privacidade</string>
+    <string name="txt_settings">Configurações</string>
+
+    <string name="txt_welcome_back">Bem-vindo de volta</string>
+    <string name="txt_see_anything_through_phone_screen">Veja qualquer coisa através da tela do telefone</string>
+    <string name="txt_transparent_wallpapers">Papéis de parede \ntransparentes</string>
+    <string name="txt_mirror_wallpapers">Papéis de parede \nde espelho</string>
+    <string name="txt_diy">DIY</string>
+    <string name="txt_select">Selecionar</string>
+    <string name="txt_share_app">Compartilhar aplicativo</string>
+    <string name="wallpaper_description">descrição do papel de parede</string>
+    <string name="txt_success">Sucesso</string>
+    <string name="txt_your_require_has_been_update_successfully">Sua solicitação foi atualizada com sucesso</string>
+    <string name="txt_backgrounds">Fundos</string>
+    <string name="txt_stickers">Adesivos</string>
+    <string name="txt_quotes">Citações</string>
+    <string name="txt_customize">Personalizar</string>
+    <string name="txt_set_as_lock_screen">Definir como tela de bloqueio</string>
+    <string name="txt_set_as_lock_screen_amp_home_screen">Definir como tela de bloqueio e inicial</string>
+    <string name="txt_set_as_home_screen">Definir como tela inicial</string>
+    <string name="txt_apply">Aplicar</string>
+    <string name="txt_result">Resultado</string>
+    <string name="txt_set_wallpaper_failed">Falha ao definir o papel de parede</string>
+    <string name="txt_how_would_you_love_this_app">O que achou deste aplicativo?</string>
+    <string name="title_rate">Obrigado pelo seu feedback</string>
+    <string name="txt_rate_us">Avalie-nos</string>
+    <string name="txt_permission">Permissão</string>
+    <string name="txt_allow_permissions_for_a_better_expericence">Permita permissões para uma melhor experiência</string>
+    <string name="txt_allow_camera_access">Permitir acesso à câmera</string>
+    <string name="txt_access_camera">Acessar câmera</string>
+    <string name="txt_some_functions_require_permission_camera">Algumas funções exigem permissão para a câmera</string>
+    <string name="txt_go_to_setting">Ir para as configurações</string>
+    <string name="txt_exit_app">Deseja sair do aplicativo?</string>
+    <string name="txt_are_you_sure">Você tem certeza?</string>
+    <string name="txt_yes">Sim</string>
+
+</resources>

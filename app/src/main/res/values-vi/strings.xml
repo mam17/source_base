@@ -1,0 +1,56 @@
+<resources>
+    <string name="onboarding_intro1">Xem bất cứ thứ gì qua màn hình điện thoại</string>
+    <string name="onboarding_intro2">Hình nền miễn phí</string>
+    <string name="onboarding_intro3">Hình nền miễn phí</string>
+
+    <string name="txt_transparent">Hình nền trong suốt</string>
+
+    <string name="txt_categories">Danh mục</string>
+    <string name="txt_cancel">Hủy</string>
+    <string name="this_action_contain_ads">Hành động này chứa quảng cáo</string>
+    <string name="loading_cmp">Đang tải Nền tảng Quản lý Quyền</string>
+    <string name="txt_next">Tiếp theo</string>
+    <string name="txt_get_start">Bắt đầu</string>
+    <string name="are_you_sure_you_want_to_exit">Bạn có chắc chắn muốn thoát không?</string>
+    <string name="txt_exit">Thoát</string>
+    <string name="choose_one">Chọn một</string>
+
+    <string name="rate_us">Đánh giá chúng tôi</string>
+    <string name="language">Ngôn ngữ</string>
+    <string name="privacy_policy">Chính sách bảo mật</string>
+    <string name="txt_settings">Cài đặt</string>
+
+    <string name="txt_welcome_back">Chào mừng bạn trở lại</string>
+    <string name="txt_see_anything_through_phone_screen">Xem bất cứ thứ gì qua màn hình điện thoại</string>
+    <string name="txt_transparent_wallpapers">Hình nền \ntrong suốt</string>
+    <string name="txt_mirror_wallpapers">Hình nền \ngương</string>
+    <string name="txt_diy">DIY</string>
+    <string name="txt_select">Chọn</string>
+    <string name="txt_share_app">Chia sẻ ứng dụng</string>
+    <string name="wallpaper_description">Mô tả hình nền</string>
+    <string name="txt_success">Thành công</string>
+    <string name="txt_your_require_has_been_update_successfully">Yêu cầu của bạn đã được cập nhật thành công</string>
+    <string name="txt_backgrounds">Hình nền</string>
+    <string name="txt_stickers">Nhãn dán</string>
+    <string name="txt_quotes">Trích dẫn</string>
+    <string name="txt_customize">Tùy chỉnh</string>
+    <string name="txt_set_as_lock_screen">Đặt làm màn hình khóa</string>
+    <string name="txt_set_as_lock_screen_amp_home_screen">Đặt làm màn hình khóa và màn hình chính</string>
+    <string name="txt_set_as_home_screen">Đặt làm màn hình chính</string>
+    <string name="txt_apply">Áp dụng</string>
+    <string name="txt_result">Kết quả</string>
+    <string name="txt_set_wallpaper_failed">Đặt hình nền thất bại</string>
+    <string name="txt_how_would_you_love_this_app">Bạn cảm thấy ứng dụng này như thế nào?</string>
+    <string name="title_rate">Cảm ơn bạn đã phản hồi</string>
+    <string name="txt_rate_us">Đánh giá chúng tôi</string>
+    <string name="txt_permission">Quyền</string>
+    <string name="txt_allow_permissions_for_a_better_expericence">Hãy cấp quyền để có trải nghiệm tốt hơn</string>
+    <string name="txt_allow_camera_access">Cho phép truy cập camera</string>
+    <string name="txt_access_camera">Truy cập camera</string>
+    <string name="txt_some_functions_require_permission_camera">Một số chức năng cần quyền truy cập camera</string>
+    <string name="txt_go_to_setting">Đi đến cài đặt</string>
+    <string name="txt_exit_app">Bạn có muốn thoát ứng dụng không?</string>
+    <string name="txt_are_you_sure">Bạn có chắc chắn không?</string>
+    <string name="txt_yes">Có</string>
+
+</resources>

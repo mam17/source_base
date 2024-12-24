@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/size30"
+    tools:context=".component.setting.SettingActivity">
+
+    <LinearLayout
+        android:id="@+id/lnTopSetting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size12"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/size16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/btnClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_close" />
+
+        <TextView
+            style="@style/TextView_7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/txt_settings"
+            android:textColor="@color/white"
+            android:textSize="@dimen/size32"
+            tools:ignore="SpUsage" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/size23"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/size40"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lnTopSetting">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnLanguage"
+            style="@style/TextView_5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:drawableStart="@drawable/ic_lang"
+            android:drawableEnd="@drawable/ic_right"
+            android:drawablePadding="@dimen/size16"
+            android:elevation="0dp"
+            android:gravity="start|center_vertical"
+            android:paddingHorizontal="@dimen/size20"
+            android:paddingVertical="@dimen/size18"
+            android:stateListAnimator="@null"
+            android:text="@string/language"
+            android:textAllCaps="false"
+            android:textColor="@color/text" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnRateUs"
+            style="@style/TextView_5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:drawableStart="@drawable/ic_star"
+            android:drawableEnd="@drawable/ic_right"
+            android:drawablePadding="@dimen/size16"
+            android:elevation="0dp"
+            android:gravity="start|center_vertical"
+            android:paddingHorizontal="@dimen/size20"
+            android:paddingVertical="@dimen/size18"
+            android:stateListAnimator="@null"
+            android:text="@string/rate_us"
+            android:textAllCaps="false"
+            android:textColor="@color/text" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnShareApp"
+            style="@style/TextView_5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:drawableStart="@drawable/ic_share"
+            android:drawableEnd="@drawable/ic_right"
+            android:drawablePadding="@dimen/size16"
+            android:elevation="0dp"
+            android:gravity="start|center_vertical"
+            android:paddingHorizontal="@dimen/size20"
+            android:paddingVertical="@dimen/size18"
+            android:stateListAnimator="@null"
+            android:text="@string/txt_share_app"
+            android:textAllCaps="false"
+            android:textColor="@color/text" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnPrivacyPolicy"
+            style="@style/TextView_5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:drawableStart="@drawable/ic_policy"
+            android:drawableEnd="@drawable/ic_right"
+            android:drawablePadding="@dimen/size16"
+            android:elevation="0dp"
+            android:gravity="start|center_vertical"
+            android:paddingHorizontal="@dimen/size20"
+            android:paddingVertical="@dimen/size18"
+            android:stateListAnimator="@null"
+            android:text="@string/privacy_policy"
+            android:textAllCaps="false"
+            android:textColor="@color/text" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,56 @@
+<resources>
+    <string name="onboarding_intro1">फोन स्क्रीन के माध्यम से कुछ भी देखें</string>
+    <string name="onboarding_intro2">फ्री स्टॉक वॉलपेपर</string>
+    <string name="onboarding_intro3">फ्री स्टॉक वॉलपेपर</string>
+
+    <string name="txt_transparent">पारदर्शी वॉलपेपर</string>
+
+    <string name="txt_categories">श्रेणियाँ</string>
+    <string name="txt_cancel">रद्द करें</string>
+    <string name="this_action_contain_ads">यह क्रिया विज्ञापन शामिल करती है</string>
+    <string name="loading_cmp">कंसेंट मैनेजमेंट प्लेटफॉर्म लोड हो रहा है</string>
+    <string name="txt_next">अगला</string>
+    <string name="txt_get_start">शुरू करें</string>
+    <string name="are_you_sure_you_want_to_exit">क्या आप वाकई बाहर निकलना चाहते हैं?</string>
+    <string name="txt_exit">बाहर निकलें</string>
+    <string name="choose_one">एक चुनें</string>
+
+    <string name="rate_us">हमें रेट करें</string>
+    <string name="language">भाषा</string>
+    <string name="privacy_policy">गोपनीयता नीति</string>
+    <string name="txt_settings">सेटिंग्स</string>
+
+    <string name="txt_welcome_back">फिर से स्वागत है</string>
+    <string name="txt_see_anything_through_phone_screen">फोन स्क्रीन के माध्यम से कुछ भी देखें</string>
+    <string name="txt_transparent_wallpapers">पारदर्शी \nवॉलपेपर</string>
+    <string name="txt_mirror_wallpapers">मिरर \nवॉलपेपर</string>
+    <string name="txt_diy">DIY</string>
+    <string name="txt_select">चुनें</string>
+    <string name="txt_share_app">ऐप साझा करें</string>
+    <string name="wallpaper_description">वॉलपेपर विवरण</string>
+    <string name="txt_success">सफलता</string>
+    <string name="txt_your_require_has_been_update_successfully">आपकी आवश्यकता को सफलतापूर्वक अपडेट कर दिया गया है</string>
+    <string name="txt_backgrounds">पृष्ठभूमियाँ</string>
+    <string name="txt_stickers">स्टीकर्स</string>
+    <string name="txt_quotes">उद्धरण</string>
+    <string name="txt_customize">अनुकूलित करें</string>
+    <string name="txt_set_as_lock_screen">लॉक स्क्रीन पर सेट करें</string>
+    <string name="txt_set_as_lock_screen_amp_home_screen">लॉक स्क्रीन और होम स्क्रीन पर सेट करें</string>
+    <string name="txt_set_as_home_screen">होम स्क्रीन पर सेट करें</string>
+    <string name="txt_apply">लागू करें</string>
+    <string name="txt_result">परिणाम</string>
+    <string name="txt_set_wallpaper_failed">वॉलपेपर सेट करना असफल रहा</string>
+    <string name="txt_how_would_you_love_this_app">आपको यह ऐप कैसा लगा?</string>
+    <string name="title_rate">आपकी प्रतिक्रिया के लिए धन्यवाद</string>
+    <string name="txt_rate_us">हमें रेट करें</string>
+    <string name="txt_permission">अनुमति</string>
+    <string name="txt_allow_permissions_for_a_better_expericence">बेहतर अनुभव के लिए अनुमति दें</string>
+    <string name="txt_allow_camera_access">कैमरा एक्सेस की अनुमति दें</string>
+    <string name="txt_access_camera">कैमरा एक्सेस</string>
+    <string name="txt_some_functions_require_permission_camera">कुछ कार्यों के लिए कैमरा अनुमति आवश्यक है</string>
+    <string name="txt_go_to_setting">सेटिंग पर जाएं</string>
+    <string name="txt_exit_app">क्या आप एप्लिकेशन से बाहर निकलना चाहते हैं?</string>
+    <string name="txt_are_you_sure">क्या आप सुनिश्चित हैं?</string>
+    <string name="txt_yes">हां</string>
+
+</resources>

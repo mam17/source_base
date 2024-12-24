@@ -1,0 +1,56 @@
+<resources>
+    <string name="onboarding_intro1">Voir n\'importe quoi à travers l\'écran du téléphone</string>
+    <string name="onboarding_intro2">Fonds d\'écran gratuits</string>
+    <string name="onboarding_intro3">Fonds d\'écran gratuits</string>
+
+    <string name="txt_transparent">Fond d\'écran transparent</string>
+
+    <string name="txt_categories">Catégories</string>
+    <string name="txt_cancel">Annuler</string>
+    <string name="this_action_contain_ads">Cette action contient des publicités</string>
+    <string name="loading_cmp">Chargement de la Plateforme de Gestion du Consentement</string>
+    <string name="txt_next">Suivant</string>
+    <string name="txt_get_start">Commencer</string>
+    <string name="are_you_sure_you_want_to_exit">Êtes-vous sûr de vouloir quitter ?</string>
+    <string name="txt_exit">Quitter</string>
+    <string name="choose_one">Choisissez-en un</string>
+
+    <string name="rate_us">Évaluez-nous</string>
+    <string name="language">Langue</string>
+    <string name="privacy_policy">Politique de confidentialité</string>
+    <string name="txt_settings">Paramètres</string>
+
+    <string name="txt_welcome_back">Bon retour</string>
+    <string name="txt_see_anything_through_phone_screen">Voir n\'importe quoi à travers l\'écran du téléphone</string>
+    <string name="txt_transparent_wallpapers">Fonds d\'écran \ntransparents</string>
+    <string name="txt_mirror_wallpapers">Fonds d\'écran \nde miroir</string>
+    <string name="txt_diy">Bricolage</string>
+    <string name="txt_select">Sélectionner</string>
+    <string name="txt_share_app">Partager l\'application</string>
+    <string name="wallpaper_description">description du fond d\'écran</string>
+    <string name="txt_success">Succès</string>
+    <string name="txt_your_require_has_been_update_successfully">Votre demande a été mise à jour avec succès</string>
+    <string name="txt_backgrounds">Arrière-plans</string>
+    <string name="txt_stickers">Autocollants</string>
+    <string name="txt_quotes">Citations</string>
+    <string name="txt_customize">Personnaliser</string>
+    <string name="txt_set_as_lock_screen">Définir comme écran de verrouillage</string>
+    <string name="txt_set_as_lock_screen_amp_home_screen">Définir comme écran de verrouillage et d\'accueil</string>
+    <string name="txt_set_as_home_screen">Définir comme écran d\'accueil</string>
+    <string name="txt_apply">Appliquer</string>
+    <string name="txt_result">Résultat</string>
+    <string name="txt_set_wallpaper_failed">Échec de la définition du fond d\'écran</string>
+    <string name="txt_how_would_you_love_this_app">Que pensez-vous de cette application ?</string>
+    <string name="title_rate">Merci pour vos commentaires</string>
+    <string name="txt_rate_us">Évaluez-nous</string>
+    <string name="txt_permission">Permission</string>
+    <string name="txt_allow_permissions_for_a_better_expericence">Autorisez les permissions pour une meilleure expérience</string>
+    <string name="txt_allow_camera_access">Autoriser l\'accès à la caméra</string>
+    <string name="txt_access_camera">Accéder à la caméra</string>
+    <string name="txt_some_functions_require_permission_camera">Certaines fonctions nécessitent l\'autorisation de la caméra</string>
+    <string name="txt_go_to_setting">Aller aux paramètres</string>
+    <string name="txt_exit_app">Voulez-vous quitter l\'application ?</string>
+    <string name="txt_are_you_sure">Êtes-vous sûr ?</string>
+    <string name="txt_yes">Oui</string>
+
+</resources>
