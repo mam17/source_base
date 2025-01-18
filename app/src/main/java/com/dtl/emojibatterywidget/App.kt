@@ -9,10 +9,14 @@ import android.os.Bundle
 import androidx.lifecycle.DefaultLifecycleObserver
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.ProcessLifecycleOwner
+import com.dtl.emojibatterywidget.utils.AppEx.getDeviceLanguage
+import com.dtl.emojibatterywidget.utils.AppEx.setAppLanguage
 import com.dtl.emojibatterywidget.utils.LocaleHelper
 import com.dtl.emojibatterywidget.utils.NetworkUtil
 import com.dtl.emojibatterywidget.utils.SpManager
 import dagger.hilt.android.HiltAndroidApp
+import org.json.JSONException
+import org.json.JSONObject
 import java.util.Locale
 import javax.inject.Inject
 import javax.inject.Singleton
@@ -28,19 +32,14 @@ class App : Application(), Application.ActivityLifecycleCallbacks, DefaultLifecy
         var context: Context? = null
     }
 
-    var isShowLoadingAd = false
-
     @Inject
     lateinit var spManager: SpManager
 
     private var currentActivity: Activity? = null
 
-
     override fun onCreate() {
         super<Application>.onCreate()
         instance = this
-
-//        FirebaseApp.initializeApp(this)
 
         registerActivityLifecycleCallbacks(this)
         ProcessLifecycleOwner.get().lifecycle.addObserver(this)
@@ -48,36 +47,23 @@ class App : Application(), Application.ActivityLifecycleCallbacks, DefaultLifecy
     }
 
     fun initAds() {
-//        MobileAds.initialize(this)
-//        val requestConfiguration = RequestConfiguration.Builder().build()
-//        MobileAds.setRequestConfiguration(requestConfiguration)
-//
-//        if(spManager.getBoolean(NameRemoteAdmob.APP_RESUME, true)){
-//            openAdmob = OpenAdmob(this, BuildConfig.open_resume)
-//        }
     }
 
     override fun onConfigurationChanged(newConfig: Configuration) {
+        val locale = getDeviceLanguage()
         val language = spManager.getLanguage()
         LocaleHelper.onAttach(this, language.languageCode)
         super.onConfigurationChanged(newConfig)
     }
 
-    override fun attachBaseContext(base: Context?) {
-        val context = LocaleHelper.onAttach(base, Locale.getDefault().language)
+    override fun attachBaseContext(newBase: Context?) {
+        val languageCode = newBase?.let { SpManager.getInstance(it).getLanguage().languageCode }
+        val context = languageCode?.let { newBase.setAppLanguage(it) }
         super.attachBaseContext(context)
     }
 
     override fun onStart(owner: LifecycleOwner) {
         super.onStart(owner)
-//        Log.i("TAG_ONSTART", "onStart: $isShowLoadingAd")
-//        if(spManager.getBoolean(NameRemoteAdmob.APP_RESUME, true) && !isShowLoadingAd){
-//            openAdmob?.run {
-//                currentActivity?.let {
-//                    showAdIfAvailable(it)
-//                }
-//            }
-//        }
     }
 
     override fun onActivityCreated(activity: Activity, savedInstanceState: Bundle?) {

@@ -23,12 +23,14 @@ object AppEx {
         }.getOrNull()
     }
 
-    fun Context.setAppLanguage(languageCode: String) {
+    fun Context.setAppLanguage(languageCode: String): Context {
         val locale = Locale(languageCode)
         Locale.setDefault(locale)
         val config = resources.configuration
         config.setLocale(locale)
-        resources.updateConfiguration(config, resources.displayMetrics)
+        config.setLayoutDirection(locale)
+
+        return createConfigurationContext(config)
     }
 
     fun Context.getDeviceLanguage(): String {

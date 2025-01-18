@@ -41,7 +41,7 @@ class LanguageActivity : BaseActivity<ActivityLanguageBinding>() {
 
         viewBinding.toolBarLanguage.btnSelect.invisible()
 
-        setStatusBarColor(R.color.color_bg)
+        setColorStatusBar(R.color.color_bg)
 
         viewBinding.toolBarLanguage.imvBack.setOnClickListener {
             finish()

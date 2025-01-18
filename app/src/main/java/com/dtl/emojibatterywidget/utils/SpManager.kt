@@ -6,6 +6,7 @@ import com.dtl.emojibatterywidget.R
 import com.dtl.emojibatterywidget.domain.layer.LanguageModel
 import com.dtl.emojibatterywidget.utils.AppEx.toJson
 import com.dtl.emojibatterywidget.utils.AppEx.toLanguageModel
+import com.google.gson.Gson
 
 class SpManager(private val preferences: SharedPreferences) {
     companion object {
@@ -57,13 +58,14 @@ class SpManager(private val preferences: SharedPreferences) {
     }
 
     fun saveLanguage(languageModel: LanguageModel) {
-        preferences.edit().putString(Constant.KEY_SP_CURRENT_LANGUAGE, languageModel.toJson())
+        preferences.edit().putString(Constant.KEY_SP_CURRENT_LANGUAGE, Gson().toJson(languageModel))
             .apply()
     }
 
     fun getLanguage(): LanguageModel {
-        return preferences.getString(Constant.KEY_SP_CURRENT_LANGUAGE, "")?.toLanguageModel()
-            ?: LanguageModel("en", R.drawable.img_eng, R.string.english)
+        return kotlin.runCatching {
+            preferences.getString(Constant.KEY_SP_CURRENT_LANGUAGE, "")?.toLanguageModel()
+        }.getOrNull() ?: LanguageModel("en", R.drawable.img_eng, R.string.english)
     }
 
     fun setUMPShowed(showed: Boolean) {

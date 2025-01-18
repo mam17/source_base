@@ -10,6 +10,8 @@ import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.view.WindowCompat
+import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.WindowInsetsControllerCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.commit
 import androidx.lifecycle.LifecycleOwner
@@ -18,53 +20,60 @@ import com.dtl.emojibatterywidget.R
 import com.dtl.emojibatterywidget.domain.layer.LanguageModel
 import com.dtl.emojibatterywidget.utils.LocaleHelper
 import com.dtl.emojibatterywidget.utils.SpManager
+import java.util.Locale
 
 
-abstract class BaseActivity<V : ViewBinding> : AppCompatActivity(), LifecycleOwner {
+abstract class BaseActivity<V : ViewBinding> : AppCompatActivity() {
     lateinit var viewBinding: V
-    lateinit var language: LanguageModel
+
     open fun onBack() {
         finish()
-    }
-
-    override fun attachBaseContext(newBase: Context) {
-        language = SpManager.getInstance(this).getLanguage()
-        val context = LocaleHelper.setLocale(newBase, language.languageCode)
-        super.attachBaseContext(context)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-//        SpManager.getInstance(this).getLanguage().let {
-//            val language: String = it.languageCode
-//            if (language.isNotEmpty()) {
-//                val res = resources
-//                val dm = res.displayMetrics
-//                val conf = res.configuration
-//                conf.setLocale(Locale(language.lowercase(Locale.getDefault())))
-//                res.updateConfiguration(conf, dm)
-//            }
-//        }
+        //language setting
+        setupLanguage()
 
-        setStatusBarColor(R.color.color_bg)
-
-        hideSystemUI()
+        //status bar setting
         WindowCompat.getInsetsController(window, window.decorView).isAppearanceLightStatusBars = true
+        hideSystemUI()
 
+        //viewBinding setting
         viewBinding = provideViewBinding()
         setContentView(viewBinding.root)
+
+        // Call initialization methods
         initViews()
         initData()
         initObserver()
+
+        //Handle Back Button Action
         handleOnBackPressed()
     }
 
-    private fun hideSystemUI() {
-        val decorView = window.decorView
-        val uiOptions = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION or View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
-        decorView.systemUiVisibility = uiOptions
+    private fun setupLanguage() {
+        val language: String = SpManager.getInstance(this).getLanguage().languageCode
+        if (language.isNotEmpty()) {
+            val locale = Locale(language.lowercase(Locale.getDefault()))
+            Locale.setDefault(locale)
+            val config = resources.configuration
+            config.setLocale(locale)
+            createConfigurationContext(config)
+        }
     }
+
+    private fun hideSystemUI() {
+        WindowCompat.setDecorFitsSystemWindows(window, false)
+        val controller = WindowCompat.getInsetsController(window, window.decorView)
+        controller.let {
+            it.hide(WindowInsetsCompat.Type.systemBars())
+            it.systemBarsBehavior =
+                WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
+        }
+    }
+
 
     open fun initAdmobInterId(): String = ""
     open fun admobConfigLoadInter() = true
@@ -95,12 +104,6 @@ abstract class BaseActivity<V : ViewBinding> : AppCompatActivity(), LifecycleOwn
         }
     }
 
-    fun setFullscreen() {
-        WindowCompat.setDecorFitsSystemWindows(window, false)
-        window.statusBarColor = Color.TRANSPARENT
-        WindowCompat.getInsetsController(window, window.decorView).isAppearanceLightStatusBars = true
-    }
-
     abstract fun provideViewBinding(): V
 
     open fun initViews() {}
@@ -119,12 +122,28 @@ abstract class BaseActivity<V : ViewBinding> : AppCompatActivity(), LifecycleOwn
 
     }
 
-    fun setStatusBarColor(color: Int) {
-        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
-        window.statusBarColor = ContextCompat.getColor(this, color)
-        WindowCompat.getInsetsController(window, window.decorView).apply {
-            isAppearanceLightStatusBars = true
+    fun setFullscreen() {
+        WindowCompat.setDecorFitsSystemWindows(window, false)
+        window.statusBarColor = Color.TRANSPARENT
+        WindowCompat.getInsetsController(window, window.decorView).isAppearanceLightStatusBars = true
+    }
+
+    fun setColorStatusBar(color: Int) {
+        setStatusBarColor(ContextCompat.getColor(this, color), true)
+    }
+
+    private fun setStatusBarColor(color: Int, lightStatus: Boolean) {
+        window.statusBarColor = color
+        WindowCompat.getInsetsController(window, window.decorView)?.let { controller ->
+            controller.isAppearanceLightStatusBars = lightStatus
         }
     }
 
+    fun visibleView(view: View, boolean: Boolean) {
+        if (boolean) {
+            view.visibility = View.VISIBLE
+        } else {
+            view.visibility = View.GONE
+        }
+    }
 }
