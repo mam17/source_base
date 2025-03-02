@@ -36,6 +36,14 @@ abstract class BaseFragment<V : ViewBinding> : Fragment() {
         (activity as? BaseActivity<*>)?.replaceFragment(id, fragment)
     }
 
+    fun removeFragment(fragment: Fragment) {
+        (activity as? BaseActivity<*>)?.removeFragment(fragment)
+    }
+
+    fun hideFragment(fragment: Fragment) {
+        (activity as? BaseActivity<*>)?.hideFragment(fragment)
+    }
+
     fun showLoading() {
         (activity as? BaseActivity<*>)?.showLoading()
     }

@@ -4,17 +4,13 @@ import android.content.Context
 import android.graphics.Color
 import android.os.Bundle
 import android.view.View
-import android.view.WindowManager
 import android.widget.Toast
 import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.view.WindowCompat
-import androidx.core.view.WindowInsetsCompat
-import androidx.core.view.WindowInsetsControllerCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.commit
-import androidx.lifecycle.LifecycleOwner
 import androidx.viewbinding.ViewBinding
 import com.dtl.emojibatterywidget.R
 import com.dtl.emojibatterywidget.domain.layer.LanguageModel
@@ -25,9 +21,16 @@ import java.util.Locale
 
 abstract class BaseActivity<V : ViewBinding> : AppCompatActivity() {
     lateinit var viewBinding: V
+    lateinit var language: LanguageModel
 
     open fun onBack() {
         finish()
+    }
+
+    override fun attachBaseContext(newBase: Context) {
+        language = SpManager.getInstance(this).getLanguage()
+        val context = LocaleHelper.setLocale(newBase, language.languageCode)
+        super.attachBaseContext(context)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -37,7 +40,8 @@ abstract class BaseActivity<V : ViewBinding> : AppCompatActivity() {
         setupLanguage()
 
         //status bar setting
-        WindowCompat.getInsetsController(window, window.decorView).isAppearanceLightStatusBars = true
+        WindowCompat.getInsetsController(window, window.decorView).isAppearanceLightStatusBars =
+            true
         hideSystemUI()
 
         //viewBinding setting
@@ -65,13 +69,9 @@ abstract class BaseActivity<V : ViewBinding> : AppCompatActivity() {
     }
 
     private fun hideSystemUI() {
-        WindowCompat.setDecorFitsSystemWindows(window, false)
-        val controller = WindowCompat.getInsetsController(window, window.decorView)
-        controller.let {
-            it.hide(WindowInsetsCompat.Type.systemBars())
-            it.systemBarsBehavior =
-                WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
-        }
+        val decorView = window.decorView
+        val uiOptions = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION or View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
+        decorView.systemUiVisibility = uiOptions
     }
 
 
@@ -96,11 +96,40 @@ abstract class BaseActivity<V : ViewBinding> : AppCompatActivity() {
         }
     }
 
+    fun removeFragment(fragment: Fragment) {
+        supportFragmentManager.commit {
+            setReorderingAllowed(true)
+            remove(fragment)
+        }
+    }
+
     fun addFragment(id: Int, fragment: Fragment) {
         supportFragmentManager.commit {
             setReorderingAllowed(true)
             addToBackStack(fragment::class.java.simpleName)
             add(id, fragment, fragment::class.java.simpleName)
+        }
+    }
+
+    fun showFragment(fragment: Fragment) {
+        supportFragmentManager.commit {
+            setReorderingAllowed(true)
+            setCustomAnimations(
+                R.anim.slide_in_right_v2,
+                R.anim.slide_out_left_v2
+            )
+            show(fragment)
+        }
+    }
+
+    fun hideFragment(fragment: Fragment) {
+        supportFragmentManager.commit {
+            setReorderingAllowed(true)
+            setCustomAnimations(
+                R.anim.slide_in_right_v2,
+                R.anim.slide_out_left_v2
+            )
+            hide(fragment)
         }
     }
 
@@ -125,7 +154,8 @@ abstract class BaseActivity<V : ViewBinding> : AppCompatActivity() {
     fun setFullscreen() {
         WindowCompat.setDecorFitsSystemWindows(window, false)
         window.statusBarColor = Color.TRANSPARENT
-        WindowCompat.getInsetsController(window, window.decorView).isAppearanceLightStatusBars = true
+        WindowCompat.getInsetsController(window, window.decorView).isAppearanceLightStatusBars =
+            true
     }
 
     fun setColorStatusBar(color: Int) {

@@ -1,4 +1,0 @@
-<wallpaper
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:settingsActivity="@string/app_name"
-    android:thumbnail="@mipmap/ic_launcher" />
